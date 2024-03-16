@@ -1,0 +1,208 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "grug",
+	"patterns": [
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#import"
+		},
+		{
+			"include": "#control_keywords"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#namespaced_functions"
+		},
+		{
+			"include": "#namespaced_enums"
+		},
+		{
+			"include": "#types"
+		},
+		{
+			"include": "#pub"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#builtin_constants"
+		},
+		{
+			"include": "#capitalized"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#enums"
+		},
+		{
+			"include": "#lowercase"
+		}
+	],
+	"repository": {
+		"comment": {
+			"patterns": [
+				{
+					"name": "comment.line",
+					"match": "# .*"
+				}
+			]
+		},
+		"import": {
+			"patterns": [
+				{
+					"match": "\\b(import) ([\\w|,| ]+) (from) (.+)$",
+					"captures": {
+						"1": {
+							"name": "keyword.control"
+						},
+						"2": {
+							"name": "support.function"
+						},
+						"3": {
+							"name": "keyword.control"
+						},
+						"4": {
+							"name": "string.quoted.double"
+						}
+					}
+				}
+			]
+		},
+		"control_keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control",
+					"match": "\\b(if|elif|else|for|while|switch|return)\\b"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword",
+					"match": "\\b(typedef)\\b"
+				}
+			]
+		},
+		"functions": {
+			"patterns": [
+				{
+					"match": "(\\w+)\\(",
+					"captures": {
+						"1": {
+							"name": "support.function"
+						}
+					}
+				}
+			]
+		},
+		"namespaced_functions": {
+			"patterns": [
+				{
+					"match": "\\b(\\w+)::(\\w+)\\(",
+					"captures": {
+						"1": {
+							"name": "support.type"
+						},
+						"2": {
+							"name": "support.function"
+						}
+					}
+				}
+			]
+		},
+		"namespaced_enums": {
+			"patterns": [
+				{
+					"match": "\\b(\\w+)::(\\w+)[^(]",
+					"captures": {
+						"1": {
+							"name": "support.type"
+						},
+						"2": {
+							"name": "constant.numeric"
+						}
+					}
+				}
+			]
+		},
+		"types": {
+			"patterns": [
+				{
+					"name": "storage.type",
+					"match": "\\b(i32|u8|f32|f64|char|void|ptr|arr|thing|struct|enum|union|mut)\\b"
+				}
+			]
+		},
+		"pub": {
+			"patterns": [
+				{
+					"name": "keyword.other",
+					"match": "\\b(pub)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape",
+					"match": "\\\\."
+				}
+			]
+		},
+		"builtin_constants": {
+			"patterns": [
+				{
+					"name": "storage.type",
+					"match": "\\bnullptr\\b"
+				}
+			]
+		},
+		"capitalized": {
+			"patterns": [
+				{
+					"name": "support.type",
+					"match": "\\b[A-Z]\\w+\\b"
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric",
+					"match": "\\b[0-9]+\\b"
+				}
+			]
+		},
+		"enums": {
+			"patterns": [
+				{
+					"name": "constant.numeric",
+					"match": "\\t((?!else|union)\\w)*\\n"
+				}
+			]
+		},
+		"lowercase": {
+			"patterns": [
+				{
+					"name": "variable.name",
+					"match": "\\b(\\w)+\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "source.grug"
+}

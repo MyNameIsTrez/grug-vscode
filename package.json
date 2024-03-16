@@ -1,0 +1,96 @@
+{
+  "name": "grug",
+  "displayName": "grug",
+  "description": "The perfect modding language.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/MyNameIsTrez/grug-vscode"
+  },
+  "icon": "./vsicons-custom-icons/file_type_cn.png",
+  "publisher": "MyNameIsTrez",
+  "engines": {
+    "vscode": "^1.78.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "grug",
+        "aliases": [
+          "grug"
+        ],
+        "extensions": [
+          ".grug"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "grug",
+        "scopeName": "source.grug",
+        "path": "./syntaxes/grug.tmLanguage.json"
+      }
+    ],
+    "configuration": [
+      {
+        "title": "grug",
+        "properties": {
+          "grug.pythonIndentation": {
+            "type": "boolean",
+            "markdownDescription": "Turn C-style `{` `}` indentation into Python-like tab indentation",
+            "default": true,
+            "order": 0
+          },
+          "grug.removeTrailingSemicolons": {
+            "type": "boolean",
+            "markdownDescription": "Turn `n += 2; N *= 3;` into `n += 2; n *= 3`",
+            "default": true,
+            "order": 1
+          }
+        }
+      }
+    ],
+    "commands": [
+      {
+        "command": "grug.toggle",
+        "title": "Toggle grug on/off"
+      },
+      {
+        "command": "grug.helloWorld",
+        "title": "Hello World"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.78.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
+    "@vscode/test-electron": "^2.3.0",
+    "electron-rebuild": "^3.2.9",
+    "eslint": "^8.39.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "electron": "^22.3.5",
+    "tree-sitter": "^0.20.1",
+    "tree-sitter-c": "^0.20.2"
+  }
+}

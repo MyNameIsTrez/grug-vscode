@@ -1,0 +1,23 @@
+import assert from <assert.h>
+import i32 from <stdint.h>
+import print from <stdio.h>
+
+add(n ptr mut i32)
+	n*++
+
+pub main() i32
+	i mut i32
+	i = 0
+
+	while i < 3
+		if i == 0
+			print("foo")
+		else
+			print("bar")
+		i++
+
+	assert(i == 3)
+	add(&i)
+	assert(i == 4)
+
+	return 0
