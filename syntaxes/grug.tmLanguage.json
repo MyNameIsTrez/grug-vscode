@@ -50,7 +50,7 @@
 					"match": "(define_\\w+)\\(",
 					"captures": {
 						"1": {
-							"name": red
+							"name": "support.function"
 						}
 					}
 				},
@@ -58,7 +58,7 @@
 					"match": "(on_\\w+)\\(",
 					"captures": {
 						"1": {
-							"name": green
+							"name": "support.function"
 						}
 					}
 				},
@@ -66,8 +66,7 @@
 					"match": "(\\w+)\\(",
 					"captures": {
 						"1": {
-							"name": blue
-							// "name": "support.function"
+							"name": "support.function"
 						}
 					}
 				}
