@@ -47,10 +47,27 @@
 		"functions": {
 			"patterns": [
 				{
+					"match": "(define_\\w+)\\(",
+					"captures": {
+						"1": {
+							"name": red
+						}
+					}
+				},
+				{
+					"match": "(on_\\w+)\\(",
+					"captures": {
+						"1": {
+							"name": green
+						}
+					}
+				},
+				{
 					"match": "(\\w+)\\(",
 					"captures": {
 						"1": {
-							"name": "support.function"
+							"name": blue
+							// "name": "support.function"
 						}
 					}
 				}
@@ -58,6 +75,14 @@
 		},
 		"types": {
 			"patterns": [
+				{
+					"match": ": \\b(.+?)\\b",
+					"captures": {
+						"1": {
+							"name": "storage.type"
+						}
+					}
+				},
 				{
 					"name": "storage.type",
 					"match": "\\b(string|i32|f64)\\b"
