@@ -86,11 +86,9 @@
     "eslint": "^8.39.0",
     "glob": "^8.1.0",
     "mocha": "^10.2.0",
-    "typescript": "^5.0.4"
+    "typescript": "^5.4.5"
   },
   "dependencies": {
-    "electron": "^22.3.5",
-    "tree-sitter": "^0.20.1",
-    "tree-sitter-c": "^0.20.2"
+    "electron": "^22.3.5"
   }
 }
