@@ -36,6 +36,22 @@
         "path": "./syntaxes/grug.tmLanguage.json"
       }
     ],
+    "semanticTokenScopes": [
+      {
+        "language": "grug",
+        "scopes": {
+          "grug_on_fn": [
+            "support.function.grug_on_fn"
+          ],
+          "grug_define_fn": [
+            "support.function.grug_define_fn"
+          ],
+          "grug_helper_fn": [
+            "support.function.grug_helper_fn"
+          ]
+        }
+      }
+    ],
     "configuration": [
       {
         "title": "grug",
@@ -55,6 +71,30 @@
         }
       }
     ],
+    "configurationDefaults": {
+      "editor.tokenColorCustomizations": {
+        "textMateRules": [
+          {
+            "scope": "support.function.grug_define_fn",
+            "settings": {
+              "foreground": "#F07178"
+            }
+          },
+          {
+            "scope": "support.function.grug_on_fn",
+            "settings": {
+              "foreground": "#C3E88D"
+            }
+          },
+          {
+            "scope": "support.function.grug_helper_fn",
+            "settings": {
+              "foreground": "#82AAFF"
+            }
+          }
+        ]
+      }
+    },
     "commands": [
       {
         "command": "grug.toggle",
