@@ -15,6 +15,9 @@
 			"include": "#types"
 		},
 		{
+			"include": "#booleans"
+		},
+		{
 			"include": "#strings"
 		},
 		{
@@ -76,6 +79,18 @@
 			"patterns": [
 				{
 					"match": "[:|\\)] \\b(.+?)\\b",
+					"captures": {
+						"1": {
+							"name": "storage.type"
+						}
+					}
+				}
+			]
+		},
+		"booleans": {
+			"patterns": [
+				{
+					"match": "\\b(true|false)\\b",
 					"captures": {
 						"1": {
 							"name": "storage.type"
