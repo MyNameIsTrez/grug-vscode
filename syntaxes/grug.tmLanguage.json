@@ -75,24 +75,12 @@
 		"types": {
 			"patterns": [
 				{
-					"match": ": \\b(.+?)\\b",
+					"match": "[:|\\)] \\b(.+?)\\b",
 					"captures": {
 						"1": {
 							"name": "storage.type"
 						}
 					}
-				},
-				{
-					"match": "\\) \\b(.+?)\\b",
-					"captures": {
-						"1": {
-							"name": "storage.type"
-						}
-					}
-				},
-				{
-					"name": "storage.type",
-					"match": "\\b(string|i32|f64)\\b"
 				}
 			]
 		},
