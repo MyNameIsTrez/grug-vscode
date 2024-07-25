@@ -48,6 +48,9 @@
           ],
           "grug_helper_fn": [
             "support.function.grug_helper_fn"
+          ],
+          "grug_game_fn": [
+            "support.function.grug_game_fn"
           ]
         }
       }
@@ -90,6 +93,12 @@
             "scope": "support.function.grug_helper_fn",
             "settings": {
               "foreground": "#82AAFF"
+            }
+          },
+          {
+            "scope": "support.function.grug_game_fn",
+            "settings": {
+              "foreground": "#d09bff"
             }
           }
         ]

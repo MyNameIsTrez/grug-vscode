@@ -66,10 +66,18 @@
 					}
 				},
 				{
-					"match": "(\\w+)\\(",
+					"match": "(helper_\\w+)\\(",
 					"captures": {
 						"1": {
 							"name": "support.function.grug_helper_fn"
+						}
+					}
+				},
+				{
+					"match": "(\\w+)\\(",
+					"captures": {
+						"1": {
+							"name": "support.function.grug_game_fn"
 						}
 					}
 				}
