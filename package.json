@@ -98,7 +98,7 @@
           {
             "scope": "support.function.grug_game_fn",
             "settings": {
-              "foreground": "#d09bff"
+              "foreground": "#c792ea"
             }
           }
         ]
