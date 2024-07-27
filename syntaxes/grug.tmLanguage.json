@@ -43,7 +43,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control",
-					"match": "\\b(return|if|else|loop|break|continue)\\b"
+					"match": "\\b(return|if|else|while|break|continue)\\b"
 				}
 			]
 		},
