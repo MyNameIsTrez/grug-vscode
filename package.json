@@ -6,7 +6,7 @@
   "repository": {
     "url": "https://github.com/MyNameIsTrez/grug-vscode"
   },
-  "icon": "./vsicons-custom-icons/grug.png",
+  "icon": "./grug_icon.png",
   "publisher": "MyNameIsTrez",
   "engines": {
     "vscode": "^1.78.0"
@@ -26,7 +26,11 @@
         "extensions": [
           ".grug"
         ],
-        "configuration": "./language-configuration.json"
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./grug_icon.png",
+          "dark": "./grug_icon.png"
+        }
       }
     ],
     "grammars": [
