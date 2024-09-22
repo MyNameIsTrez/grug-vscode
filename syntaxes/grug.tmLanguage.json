@@ -116,7 +116,7 @@
 					"match": "\\b(and|or|not)\\b",
 					"captures": {
 						"1": {
-							"name": "keyword.operator"
+							"name": "storage.type"
 						}
 					}
 				}
