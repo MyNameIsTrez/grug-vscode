@@ -18,6 +18,9 @@
 			"include": "#booleans"
 		},
 		{
+			"include": "#logical_operators"
+		},
+		{
 			"include": "#strings"
 		},
 		{
@@ -102,6 +105,18 @@
 					"captures": {
 						"1": {
 							"name": "storage.type"
+						}
+					}
+				}
+			]
+		},
+		"logical_operators": {
+			"patterns": [
+				{
+					"match": "\\b(and|or|not)\\b",
+					"captures": {
+						"1": {
+							"name": "keyword.operator"
 						}
 					}
 				}
