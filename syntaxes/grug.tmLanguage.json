@@ -30,6 +30,9 @@
 			"include": "#numbers"
 		},
 		{
+			"include": "#null_id"
+		},
+		{
 			"include": "#lowercase"
 		}
 	],
@@ -146,6 +149,14 @@
 				{
 					"name": "constant.numeric",
 					"match": "\\b[0-9]+\\b"
+				}
+			]
+		},
+		"null_id": {
+			"patterns": [
+				{
+					"name": "constant.numeric",
+					"match": "null_id"
 				}
 			]
 		},
