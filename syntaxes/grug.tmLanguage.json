@@ -30,6 +30,9 @@
 			"include": "#numbers"
 		},
 		{
+			"include": "#me"
+		},
+		{
 			"include": "#null_id"
 		},
 		{
@@ -149,6 +152,14 @@
 				{
 					"name": "constant.numeric",
 					"match": "\\b[0-9]+\\b"
+				}
+			]
+		},
+		"me": {
+			"patterns": [
+				{
+					"name": "constant.numeric",
+					"match": "me"
 				}
 			]
 		},
