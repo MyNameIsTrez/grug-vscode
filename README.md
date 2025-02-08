@@ -4,6 +4,6 @@ This is the VS Code extension for my modding language called grug, which I descr
 
 ## Publishing updates
 
-`sudo npm install -g @vscode/vsce`
-`sudo vsce package`
-`sudo vsce publish`
+You'll need `vsce`, which can be downloaded with `sudo npm install -g @vscode/vsce`.
+
+Run `sudo vsce publish` to publish the update. Don't forget to increment the `version` key at the top of `package.json`!
