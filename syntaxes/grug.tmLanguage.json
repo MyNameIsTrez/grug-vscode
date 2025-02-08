@@ -159,7 +159,7 @@
 			"patterns": [
 				{
 					"name": "constant.numeric",
-					"match": "me"
+					"match": "\\bme\\b"
 				}
 			]
 		},
@@ -167,7 +167,7 @@
 			"patterns": [
 				{
 					"name": "constant.numeric",
-					"match": "null_id"
+					"match": "\\bnull_id\\b"
 				}
 			]
 		},
