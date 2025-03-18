@@ -2,7 +2,7 @@
   "name": "grug",
   "displayName": "grug",
   "description": "The perfect modding language.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "repository": {
     "url": "https://github.com/MyNameIsTrez/grug-vscode"
   },
@@ -47,9 +47,6 @@
           "grug_on_fn": [
             "support.function.grug_on_fn"
           ],
-          "grug_define_fn": [
-            "support.function.grug_define_fn"
-          ],
           "grug_helper_fn": [
             "support.function.grug_helper_fn"
           ],
@@ -81,12 +78,6 @@
     "configurationDefaults": {
       "editor.tokenColorCustomizations": {
         "textMateRules": [
-          {
-            "scope": "support.function.grug_define_fn",
-            "settings": {
-              "foreground": "#F07178"
-            }
-          },
           {
             "scope": "support.function.grug_on_fn",
             "settings": {

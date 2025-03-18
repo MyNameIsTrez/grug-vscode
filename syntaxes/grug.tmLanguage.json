@@ -59,14 +59,6 @@
 		"functions": {
 			"patterns": [
 				{
-					"match": "(define)\\(",
-					"captures": {
-						"1": {
-							"name": "support.function.grug_define_fn"
-						}
-					}
-				},
-				{
 					"match": "(on_\\w+)\\(",
 					"captures": {
 						"1": {
