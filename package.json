@@ -133,6 +133,7 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
-    "electron": "^22.3.5"
+    "electron": "^22.3.5",
+    "vscode-languageclient": "^9.0.1"
   }
 }
