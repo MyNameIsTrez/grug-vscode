@@ -3,12 +3,26 @@
 import * as vscode from 'vscode';
 import { LanguageClientOptions } from 'vscode-languageclient';
 import { LanguageClient, ServerOptions } from "vscode-languageclient/node"
+import { getGrugBin } from './install';
+import * as process from "child_process";
+import * as os from "os";
+
+function commandExists(cmd: string): boolean {
+	try {
+		const checker = os.platform() === "win32" ? "where" : "which";
+		process.execSync(`${checker} ${cmd}`, {
+			stdio: "ignore",
+		});
+	} catch (err) {
+		return false;
+	}
+
+	return true;
+}
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
-	// TODO: Automatically install Grug-LS if it's not found in PATH
-
 	// Use the console to output diagnostic information (console.log) and errors (console.error)
 	// This line of code will only be executed once when your extension is activated
 	console.log('Extension "grug" is now active!')
@@ -21,13 +35,23 @@ export function activate(context: vscode.ExtensionContext) {
 		// Display a message box to the user
 		vscode.window.showInformationMessage('Hello World from grug!');
 	});
-	
+
+	let serverCommand;
+
+	if (commandExists("grug-ls")) {
+		serverCommand = "grug-ls";
+		console.log("Using system grug-ls")
+	} else {
+		serverCommand = context.asAbsolutePath(getGrugBin());
+		console.log("Using automatically downloaded grug-ls");
+	}
+
 	const serverOptions: ServerOptions = {
       run: {
-        command: "grug-ls",
+        command: serverCommand,
       },
       debug: {
-        command: "grug-ls",
+        command: serverCommand,
       },
     };
 
