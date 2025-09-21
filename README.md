@@ -2,6 +2,12 @@
 
 This is the VS Code extension for my modding language called grug, which I described in detail [in my blog post](https://mynameistrez.github.io/2024/02/29/creating-the-perfect-modding-language.html).
 
+## Developing
+
+1. Run `npm install`
+2. Run `npm run compile`
+3. Press F5 in VS Code to run the extension.
+
 ## Publishing updates
 
 You'll need `vsce`, which can be downloaded with `sudo npm install -g @vscode/vsce`.
