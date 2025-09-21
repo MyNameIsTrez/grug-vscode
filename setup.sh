@@ -5,7 +5,7 @@
 # https://github.com/xijnim/grug-ls/releases/download/v0.1.1/grug-ls-aarch64-apple-darwin.tar.xz
 
 set -e
-VERSION=$(echo "v0.1.1")
+VERSION=$(echo "v0.1.2")
 
 WINDOWS_TARGET=$(echo "x86_64-pc-windows-msvc")
 TARGETS=($WINDOWS_TARGET "aarch64-apple-darwin" "x86_64-apple-darwin" $"aarch64-unknown-linux-gnu" "x86_64-unknown-linux-gnu")
