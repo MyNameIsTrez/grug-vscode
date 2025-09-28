@@ -14,7 +14,7 @@ This repository depends on xijnim's [grug-ls](https://github.com/xijnim/grug-ls/
 
 You'll need `vsce`, which can be downloaded with `sudo npm install -g @vscode/vsce`.
 
-Run `sudo vsce publish` to publish the update. Don't forget to increment the `version` key at the top of `package.json`!
+Run `sudo vsce publish` to publish the update. Don't forget to first add a commit that increments the `version` key at the top of `package.json`, before publishing the update!
 
 ## Coloring
 
