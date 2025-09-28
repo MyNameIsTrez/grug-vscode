@@ -2,6 +2,10 @@
 
 This is the VS Code extension for my modding language called grug, which I described in detail [in my blog post](https://mynameistrez.github.io/2024/02/29/creating-the-perfect-modding-language.html).
 
+The full name of this extension is `grug`.
+
+If `grug` doesn't show up in your VS Code's Extensions tab, then your VS Code might not be using Microsoft's marketplace. On Arch Linux you can work around this by installing `code-marketplace` from the AUR.
+
 This repository depends on xijnim's [grug-ls](https://github.com/xijnim/grug-ls/) repository.
 
 ## Developing
