@@ -3,7 +3,7 @@
 # Intended for when deploying a new grug-ls version
 
 set -e
-VERSION=$(echo "v0.1.3")
+VERSION=$(echo "v0.1.4")
 
 WINDOWS_TARGET=$(echo "x86_64-pc-windows-msvc")
 TARGETS=($WINDOWS_TARGET "aarch64-apple-darwin" "x86_64-apple-darwin" $"aarch64-unknown-linux-gnu" "x86_64-unknown-linux-gnu")
